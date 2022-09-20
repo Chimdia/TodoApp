@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="includes/header">
+    <title>Update</title>
+</head>
+<body>
+
+<nav th:replace="includes/navbar :: navbar"></nav>
+<br>
+
+
+<div class = "container">
+    <div class = "row">
+        <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+            <h1 class = "text-center"> Add Task </h1>
+            <div class = "card-body">
+                <form th:action="@{/dashboard}" method="post" th:object="${newTask}">
+                    <div class ="form-group">
+                        <label th:for="title">  Title </label>
+                        <input
+                                type = "text"
+                                name = "productName"
+                                th:field = "*{title}"
+                                class = "form-control"
+                                placeholder="Title"
+                        />
+                    </div>
+
+                    <div class ="form-group">
+                        <label th:for="description"> Description</label>
+                        <input
+                                type = "text"
+                                name = "category"
+                                th:field = "*{description}"
+                                class = "form-control"
+                                placeholder="Description"
+                        />
+                    </div>
+                    <div class = "box-footer">
+                        <button type="submit" class = "btn btn-primary">Add
+
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="includes/footer"></div>
+</body>
+</html>

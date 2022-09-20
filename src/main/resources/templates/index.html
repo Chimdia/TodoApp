@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="includes/header">
+  <title>Home</title>
+
+</head>
+
+
+<body>
+
+
+<nav th:replace="includes/navbar :: navbar"></nav>
+<br>
+
+<div class="container">
+  <h1>Sign Up and let us do the work.</h1>
+
+  <!--    Welcome <span sec:authentication="principal.username"> User</span>-->
+</div>
+
+
+<div th:replace="includes/footer"></div>
+</body>
+</html>
